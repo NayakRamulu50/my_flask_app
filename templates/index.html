@@ -1,0 +1,124 @@
+<!-- templates/index.html -->
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Upload new File</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Outfit:wght@400;700&display=swap');
+
+        body {
+            background-color: #0d0848;
+        }
+
+
+        main {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 15%;
+            flex-wrap: wrap;
+
+        }
+
+        .main-container {
+
+            width: 400px;
+            height: 200px;
+            background-color: aliceblue;
+            padding: 20px;
+            border: 1px solid lightgoldenrodyellow;
+            border-radius: 15px;
+        }
+
+        h1 {
+            font-family: monospace;
+            font-size: 50px;
+            color: white;
+
+
+        }
+
+        .logo {
+            transition: all 0.5s ease;
+            cursor: pointer;
+            color: darkorange;
+
+        }
+
+        h2 {
+            font-family: monospace;
+            font-weight: 900;
+            font-size: 20px;
+        }
+
+        h2 span:hover {
+            transform: rotate(20deg);
+            color: rgb(0, 51, 255);
+        }
+
+        p {
+            color: #3b3a3a;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        .content {
+            width: 600px;
+
+        }
+
+        .content p {
+            color: rgba(255, 255, 255, 0.781);
+            font-size: 18px;
+        }
+        .file{
+            padding: 5px 8px;
+            background-color: #0d0848;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        .submit{
+            padding: 8px 28px;
+            background-color: #0d0848;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: all 0.5s ease;
+        }
+        .submit:hover{
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="content">
+            <h1>Unzip Files Instantly and Safely &#10024;</h1>
+            <p>Welcome to our ZIP File Viewer! This tool is designed to make your life easier by allowing you to
+                instantly view the contents of any ZIP file.</p>
+        </div>
+        <section class="main-container">
+            <h2>Upload new ZIP File <span class="material-symbols-outlined logo">
+                    upload
+                </span></h2>
+            <p>This tool allows you to upload a ZIP file and view its contents without the need to download or extract
+                it on your device.
+                It's quick, easy, and secure - perfect for when you're on the go or using a shared computer.</p>
+            <form method=post enctype=multipart/form-data action="/upload">
+                <input class="file" type=file name=file>
+                <input class="submit" type=submit value=Upload>
+            </form>
+        </section>
+    </main>
+    
+</body>
+
+</html>
